@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <!--Import Google Icon Font-->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <!--Import materialize.css-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css">
+
+  <!--Let browser know website is optimized for mobile-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>EyesNet: A deep learning framework for classifying patient-based age-related macular degeneration severity in
+    retinal color fundus photographs</title>
+
+  <style>
+    body {
+        font-family: 'Muli', 'Helvetica', 'Arial', 'sans-serif';
+    }
+
+    h2 {
+        font-family: 'Catamaran', 'Helvetica', 'Arial', 'sans-serif';
+    }
+
+/*    .container .row:nth-child(even) {
+        background-color: #f5f5f5;
+    }*/
+
+    .dark {
+        background-color: #f5f5f5;
+    }
+
+    .header {
+        padding-top: 50px;
+        padding-bottom: 30px;
+        color: white;
+        background-color: #205493;
+    }
+
+    .header .title {
+        font-size: 2em;
+        font-weight: 700;
+        letter-spacing: 2px;
+    }
+
+    .header .authors {
+        font-family: 'Catamaran', 'Helvetica', 'Arial', 'sans-serif';
+        font-weight: 200;
+        letter-spacing: 1px;
+    }
+
+    .org-section img {
+      height: 36px;
+    }
+
+    .page-footer {
+      background-color: #205493;
+    }
+
+    .nav-wrapper {
+      background-color: #205493;
+    }
+
+    .footer-copyright {
+      /*background-color: #1f4277;*/
+      /*color: #fff;*/
+      /*#text-align: left;*/
+    }
+
+    .header h6{
+        background-color: black;
+        padding: 20px;
+        border-radius: 20px;
+        color: limegreen;
+        font-family: "Courier New", Courier, monospace;
+    }
+  </style>
+</head>
+
+<body>
+<div class="row header">
+    <div class="col l2 hide-on-med-and-down"></div>
+    <div class="container">
+      <div class="row">
+        <div class="col s12">
+            <h3>EyesNet: A deep learning framework for classifying patient-based
+            age-related macular degeneration severity in retinal color fundus photographs</h3>
+        </div>
+        <div class="col l12">
+            <h5>Yifan Peng<sup>1*</sup>, Shazia Dharssi<sup>1,2*</sup>, Qingyu Chen<sup>1</sup>, Elvira Agron<sup>2</sup>, Wai Wong<sup>2</sup>, Emily Y. Chew<sup>2&dagger;</sup>, Zhiyong Lu<sup>1&dagger;</sup></h5>
+            <p>1. National Center for Biotechnology Information (NCBI), National Library of Medicine (NLM), National Institutes of Health (NIH), Bethesda, Maryland, United States;</p>
+            <p>2. National Eye Institute (NEI), National Institutes of Health (NIH), Bethesda, Maryland, United States;</p>
+        </div>
+        <div class="col s12">
+          <h6>> Source code coming soon</h6>
+        </div>
+      </div>
+    </div>
+</div>
+
+
+<section>
+  <div class="container">
+    <div class="row">
+      <div class="col l9">
+        <h5>We developed a deep learning framework that can classify retinal color fundus photographs into a 6 class patient-based age-related macular degeneration (AMD) severity score at a level that exceeds U.S.-licensed ophthalmologists.</h5>
+        <p>Age-related macular degeneration (AMD) is the leading cause of incurable blindness worldwide in people over the age of 65. The Age-Related Eye Disease Study (AREDS) Simplified Severity Scale uses two risk factors found in color fundus photographs (drusen and pigmentary abnormalities) to provide convenient risk categories for the development of late AMD. However, manual assignment can still be time consuming, expensive, and requires domain expertise.<p>
+        <p>Our model, EyesNet, mimics the human grading process by first detecting risk factors for each eye (large drusen and pigmentary abnormalities) and subsequently calculates patient-based AMD severity scores. EyesNet was trained and validated on 59,302 color fundus photographs from 4,549 participants.</p>
+      </div>
+      <div class="col l3"><img src="images/Fig9.png", width="300px"></div>
+    </div>
+  </div>
+</section>
+
+<section class="grey lighten-4">
+  <div class="container">
+    <div class="row">
+      <div class="col l6"><img src="images/Fig1.png", width="500px" style="padding-top:20px"></div>
+      <div class="col l6">
+        <h5>EyesNet was trained on the NIH AREDS dataset, the largest publicly available dataset of color fundus images for AMD analysis</h5>
+        <p>This dataset, released by the NIH, contains retinal color fundus images from over 4,549 patients. Grades obtained from a central reading center were used to calculate AMD severity scores for ground truth labels. Performance of EyesNet was compared to the performance of U.S.-licensed ophthalmologists, who independently graded at baseline 450 AREDS patients based on a clinical evaluation.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <div class="row">
+      <div class="col s6">
+        <h5>Our model consistently exceeds U.S.-licensed ophthalmologists on drusen and pigmentary abnormalities, and is comparable to ophthalmologists on late AMD detection. </h5>
+        <p>As seen to the left, EyesNet's performance (accuracy=0.671; kappa=0.559) exceeds ophthalmologist performance levels (accuracy=0.598; kappa=0.466) on identifying AREDS Simplified Severity Scale scores. Additionally, EyesNet's performance was compared to two other deep learning models with different training strategies employed. Again, EyesNet's performance is superior to both model performance levels.</p>
+      </div>
+      <div class="col s6"><img src="images/Tab4.png", width="500px" style="padding-top:40px"></div>
+    </div>
+  </div>
+</section>
+
+<section class="grey lighten-4">
+  <div class="container">
+    <div class="row">
+      <div class="col s12">
+        <h5>Summary</h5>
+        <p>While several automated deep learning systems have been developed for classifying color fundus photographs of individual eyes by AMD severity score, none to date have utilized a patient-based scoring system that employs images from both eyes to obtain one classification score for the individual.</p>
+        <p>EyesNet, trained on one of the largest color fundus image datasets for AMD analysis, shows high classification accuracy in the AREDS dataset and can be used to assign individual patients to AMD risk categories based on the AREDS Simplified Severity Scale. Its superior performance compared to ophthalmologists’ clinical examination of AMD highlights the potential of deep learning systems to enhance clinical decision-making processes and allow for better understanding of retinal disease.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section>
+  <div class="container">
+    <div class="row">
+      <div class="col s12">
+        <h5>Acknowledgments</h5>
+        <p>This work was supported by the Intramural Research Programs of the National Institutes of Health, National Library of Medicine and National Eye Institute.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="page-footer">
+      <div class="container">
+        <div class="row">
+          <div class="col l6 s12">
+            <h5 class="white-text">Disclaimer</h5>
+            <p>This tool shows the results of research conducted in the <a href="https://www.ncbi.nlm.nih.gov/research/">Computational Biology Branch</a>, <a href="https://www.ncbi.nlm.nih.gov/home/about">NCBI</a>. The information produced on this website is not intended for direct diagnostic use or medical decision-making without review and oversight by a clinical professional. Individuals should not change their health behavior solely on the basis of information produced on this website. NIH does not independently verify the validity or utility of the information produced by this tool. If you have questions about the information produced on this website, please see a health care professional. More information about <a href="https://www.ncbi.nlm.nih.gov/home/about/policies.shtml">NCBI's disclaimer policy</a> is available.</p>
+            <p><a href="https://www.ncbi.nlm.nih.gov/research/bionlp/">About text mining group</a></p>
+            <div class="org-section">
+                        <a href="https://www.hhs.gov/"><img src="images/dhhs-logo-white.svg" alt="U.S. Department of Health &amp; Human Services"></a>
+                        <a href="https://www.nih.gov/"><img src="images/nih-logo-white.svg" alt="National Institutes of Health"></a>
+                        <a href="https://www.nlm.nih.gov/"><img src="images/nlm-logo-letters-white.svg" alt="National Library of Medicine"></a>
+                        <a href="https://www.usa.gov/"><img src="images/usagov-logo-white.svg" alt="USA.gov"></a>
+                    </div>
+        </div>
+        <div class="col l5 offset-l1 s12 align-left">
+            <p class="grey-text text-lighten-4">If you have questions about our work, contact us at:</p>
+            <p class="grey-text text-lighten-4">yifan.peng@nih.gov</p>
+        </div>
+      </div>
+
+      <div class="footer-copyright">
+        <div class="container">
+            National Center for Biotechnology Information, U.S. National Library of Medicine
+            8600 Rockville Pike, Bethesda MD, 20894 USA
+        </div>
+    </div>
+</footer>
+</body>
+</html>
