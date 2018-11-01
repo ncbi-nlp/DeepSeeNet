@@ -8,7 +8,7 @@
 
   <!--Let browser know website is optimized for mobile-->
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>EyesNet: A deep learning framework for classifying patient-based age-related macular degeneration severity in
+  <title>DeepSeeNet: A deep learning framework for classifying patient-based age-related macular degeneration severity in
     retinal color fundus photographs</title>
 
   <style>
@@ -85,11 +85,11 @@
     <div class="container">
       <div class="row">
         <div class="col s12">
-            <h3>EyesNet: A deep learning framework for classifying patient-based
+            <h3>DeepSeeNet: A deep learning framework for classifying patient-based
             age-related macular degeneration severity in retinal color fundus photographs</h3>
         </div>
         <div class="col l12">
-            <h5>Yifan Peng<sup>1*</sup>, Shazia Dharssi<sup>1,2*</sup>, Qingyu Chen<sup>1</sup>, Elvira Agron<sup>2</sup>, Wai Wong<sup>2</sup>, Emily Y. Chew<sup>2&dagger;</sup>, Zhiyong Lu<sup>1&dagger;</sup></h5>
+            <h5>Yifan Peng<sup>1*</sup>, Shazia Dharssi<sup>1,2*</sup>, Qingyu Chen<sup>1</sup>, Elvira Agrón<sup>2</sup>, Wai Wong<sup>2</sup>, Emily Y. Chew<sup>2&dagger;</sup>, Zhiyong Lu<sup>1&dagger;</sup></h5>
             <p>1. National Center for Biotechnology Information (NCBI), National Library of Medicine (NLM), National Institutes of Health (NIH), Bethesda, Maryland, United States;</p>
             <p>2. National Eye Institute (NEI), National Institutes of Health (NIH), Bethesda, Maryland, United States;</p>
             <p>* These authors contributed equally to this work.</p>
@@ -106,12 +106,12 @@
 <section>
   <div class="container">
     <div class="row">
-      <div class="col l9">
-        <h5>We developed a deep learning framework that can classify retinal color fundus photographs into a 6 class patient-based age-related macular degeneration (AMD) severity score at a level that exceeds U.S.-licensed ophthalmologists.</h5>
+      <div class="col l7">
+        <h5>We developed a deep learning framework that can classify retinal color fundus photographs into a 6 class patient-based age-related macular degeneration (AMD) severity score at a level that exceeds retinal specialists.</h5>
         <p>Age-related macular degeneration (AMD) is the leading cause of incurable blindness worldwide in people over the age of 65. The Age-Related Eye Disease Study (AREDS) Simplified Severity Scale uses two risk factors found in color fundus photographs (drusen and pigmentary abnormalities) to provide convenient risk categories for the development of late AMD. However, manual assignment can still be time consuming, expensive, and requires domain expertise.<p>
-        <p>Our model, EyesNet, mimics the human grading process by first detecting risk factors for each eye (large drusen and pigmentary abnormalities) and subsequently calculates patient-based AMD severity scores. EyesNet was trained and validated on 59,302 color fundus photographs from 4,549 participants.</p>
+        <p>Our model, DeepSeeNet, mimics the human grading process by first detecting risk factors for each eye (large drusen and pigmentary abnormalities) and subsequently calculates patient-based AMD severity scores. DeepSeeNet was trained and validated on 59,302 color fundus photographs from 4,549 participants.</p>
       </div>
-      <div class="col l3"><img src="images/Fig9.png"></div>
+      <div class="col l5"><img src="images/Fig5.png"></div>
     </div>
   </div>
 </section>
@@ -121,8 +121,8 @@
     <div class="row">
       <div class="col l6"><img src="images/Fig1.png" style="padding-top:20px"></div>
       <div class="col l6">
-        <h5>EyesNet was trained on the NIH AREDS dataset, the largest publicly available dataset of color fundus images for AMD analysis</h5>
-        <p>This dataset, released by the NIH, contains retinal color fundus images from over 4,549 patients. Grades obtained from a central reading center were used to calculate AMD severity scores for ground truth labels. Performance of EyesNet was compared to the performance of U.S.-licensed ophthalmologists, who independently graded at baseline 450 AREDS patients based on a clinical evaluation.</p>
+        <h5>DeepSeeNet was trained on the NIH AREDS dataset, the largest publicly available dataset of color fundus images for AMD analysis</h5>
+        <p>This dataset, released by the NIH, contains retinal color fundus images from over 4,549 patients. Grades obtained from a central reading center were used to calculate AMD severity scores for ground truth labels. Performance of DeepSeeNet was compared to the performance of retinal specialists, who independently assessed 450 AREDS participants as part of a qualification survey used to determine initial AMD severity for each eye.</p>
       </div>
     </div>
   </div>
@@ -132,8 +132,8 @@
   <div class="container">
     <div class="row">
       <div class="col s6">
-        <h5>Our model consistently exceeds U.S.-licensed ophthalmologists on drusen and pigmentary abnormalities, and is comparable to ophthalmologists on late AMD detection. </h5>
-        <p>As seen to the left, EyesNet's performance (accuracy=0.671; kappa=0.559) exceeds ophthalmologist performance levels (accuracy=0.598; kappa=0.466) on identifying AREDS Simplified Severity Scale scores. Additionally, EyesNet's performance was compared to two other deep learning models with different training strategies employed. Again, EyesNet's performance is superior to both model performance levels.</p>
+        <h5>Our model consistently exceeds retinal specialists on drusen and pigmentary abnormalities, and is comparable to retinal specialists on late AMD detection. </h5>
+        <p>As seen to the right, DeepSeeNet's performance (accuracy=0.671; kappa=0.558) exceeds retinal specialists performance levels (accuracy=0.599; kappa=0.467) on identifying AREDS Simplified Severity Scale scores. Additionally, DeepSeeNet's performance was compared to two other deep learning models with different training strategies employed. Again, DeepSeeNet's performance is superior to both model performance levels.</p>
       </div>
       <div class="col s6"><img src="images/Tab4.png" style="padding-top:40px"></div>
     </div>
@@ -146,7 +146,8 @@
       <div class="col s12">
         <h5>Summary</h5>
         <p>While several automated deep learning systems have been developed for classifying color fundus photographs of individual eyes by AMD severity score, none to date have utilized a patient-based scoring system that employs images from both eyes to obtain one classification score for the individual.</p>
-        <p>EyesNet, trained on one of the largest color fundus image datasets for AMD analysis, shows high classification accuracy in the AREDS dataset and can be used to assign individual patients to AMD risk categories based on the AREDS Simplified Severity Scale. Its superior performance compared to ophthalmologists’ clinical examination of AMD highlights the potential of deep learning systems to enhance clinical decision-making processes and allow for better understanding of retinal disease.</p>
+        <p>DeepSeeNet, trained on one of the largest color fundus image datasets for AMD analysis, shows high classification accuracy in the AREDS dataset and can be used to assign individual patients to AMD risk categories based on the AREDS Simplified Severity Scale. DeepSeeNet performed better on patient-based, multi-class classification (accuracy=0.671; kappa=0.558) than retinal specialists (accuracy=0.599; kappa=0.467) with high AUCs in the detection of large drusen (0.94), pigmentary abnormalities (0.93) and late AMD (0.97), respectively.
+        Its superior performance highlights the potential of deep learning systems to enhance clinical decision-making processes and allow for better understanding of retinal disease.</p>
       </div>
     </div>
   </div>
