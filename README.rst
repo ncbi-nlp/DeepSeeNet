@@ -67,8 +67,8 @@ More options (e.g., setting the models) can be obtained by running
    $ python examples/predict_simplified_score.py --help
 
 
-Using DeepSeeNet model zoo
---------------------------
+Pretrained DeepSeeNet models
+----------------------------
 
 Besides grading the simplified score, we also provide individual risk factor models. For example
 
@@ -84,6 +84,8 @@ Besides grading the simplified score, we also provide individual risk factor mod
 
 
 All models can be found at ``deepseenet``.
+
+The pretrained models can be found at: 
 
 
 Training DeepSeeNet model
