@@ -115,7 +115,7 @@ Citing DeepSeeNet
 
 If you're running the DeepSeeNet framework, please cite:
 
-*  Peng Y, Dharssi S, Chen Q, Keenan T, Agron E, Wong W, Chew E, Lu Z. `DeepSeeNet: A deep learning model for automated classification of patientbased age-related macular degeneration severity from color fundus photographs`_. Ophthalmology. 2018 (Accepted).
+*  Peng Y, Dharssi S, Chen Q, Keenan T, Agron E, Wong W, Chew E, Lu Z. DeepSeeNet: A deep learning model for automated classification of patientbased age-related macular degeneration severity from color fundus photographs. Ophthalmology. 2018 (Accepted).
 
 
 Disclaimer
