@@ -123,7 +123,11 @@ If you're running the DeepSeeNet framework, please cite:
 Disclaimer
 ==========
 
-This tool shows the results of research conducted in the Computational Biology Branch, NCBI. The information produced on this website is not intended for direct diagnostic use or medical decision-making without review and oversight by a clinical professional. Individuals should not change their health behavior solely on the basis of information produced on this website. NIH does not independently verify the validity or utility of the information produced by this tool. If you have questions about the information produced on this website, please see a health care professional. More information about NCBI's disclaimer policy is available.
+This tool shows the results of research conducted in the `Computational Biology Branch <https://www.ncbi.nlm.nih.gov/research/>`_, `NCBI <https://www.ncbi.nlm.nih.gov/home/about>`_. 
 
+The information produced on this website is not intended for direct diagnostic use or medical decision-making without review and oversight by a clinical professional. Individuals should not change their health behavior solely on the basis of information produced on this website. NIH does not independently verify the validity or utility of the information produced by this tool. If you have questions about the information produced on this website, please see a health care professional. 
 
+More information about `NCBI's disclaimer policy <https://www.ncbi.nlm.nih.gov/home/about/policies.shtml>`_ is available.
+
+About `text mining group <https://www.ncbi.nlm.nih.gov/research/bionlp/>`_.
 
