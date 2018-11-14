@@ -5,10 +5,10 @@ from keras import models
 from keras.preprocessing import image
 from keras.utils import get_file
 
-from deepseenet import eyesnet_risk_factor
+from deepseenet import deepseenet_risk_factor
 from deepseenet.utils import crop2square
 
-DRUSEN_PATH = 'https://github.com/yfpeng/EyesNet/releases/download/v0.1/drusen_model.h5'
+DRUSEN_PATH = 'https://github.com/ncbi-nlp/DeepSeeNet/releases/download/0.1/drusen_model.h5'
 DRUSEN_MD5 = '997a8229f972482e127e8a32d1967549'
 
 
@@ -26,11 +26,11 @@ def preprocess_image(image_path):
     img = crop2square(image.load_img(image_path)).resize((224, 224))
     x = image.img_to_array(img)
     x = np.expand_dims(x, axis=0)
-    x = eyesnet_risk_factor.preprocess_input(x)
+    x = deepseenet_risk_factor.preprocess_input(x)
     return x
 
 
-def EyesNetDrusen(model='areds1'):
+def DeepSeeNetDrusen(model='areds'):
     """
     Instantiates the EyesNet drusen architecture.
 
@@ -41,7 +41,7 @@ def EyesNetDrusen(model='areds1'):
     Returns:
         A Keras model instance.
     """
-    if model == 'areds1':
+    if model == 'areds':
         model = get_file(
             'drusen_model.h5',
             DRUSEN_PATH,

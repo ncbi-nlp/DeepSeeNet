@@ -17,4 +17,7 @@ fitness for any particular purpose.
 
 Please cite the author in any work or product based on this material:
 
+Peng Y, Dharssi S, Chen Q, Keenan T, Agron E, Wong W, Chew E, Lu Z. DeepSeeNet:
+  A deep learning model for automated classification of patientbased age-related
+  macular degeneration severity from color fundus photographs. Ophthalmology. 2018.
 

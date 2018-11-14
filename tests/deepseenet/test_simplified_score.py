@@ -9,11 +9,11 @@ def test_advanced_amd():
                 'pigment': (pigment, 0),
                 'advanced_amd': (0, 1)
             }
-            assert deepseenet.model.get_simplified_score(scores) == 5
+            assert deepseenet.deepseenet_simplified.get_simplified_score(scores) == 5
             scores['advanced_amd'] = (1, 0)
-            assert deepseenet.model.get_simplified_score(scores) == 5
+            assert deepseenet.deepseenet_simplified.get_simplified_score(scores) == 5
             scores['advanced_amd'] = (1, 1)
-            assert deepseenet.model.get_simplified_score(scores) == 5
+            assert deepseenet.deepseenet_simplified.get_simplified_score(scores) == 5
 
 
 def test_single_eye():
@@ -29,16 +29,16 @@ def test_single_eye():
     for k in simple_scores:
         scores['drusen'] = (k[0], 0)
         scores['pigment'] = (k[1], 0)
-        assert deepseenet.model.get_simplified_score(scores) == simple_scores[k]
+        assert deepseenet.deepseenet_simplified.get_simplified_score(scores) == simple_scores[k]
         scores['drusen'] = (0, k[0])
         scores['pigment'] = (0, k[1])
-        assert deepseenet.model.get_simplified_score(scores) == simple_scores[k]
+        assert deepseenet.deepseenet_simplified.get_simplified_score(scores) == simple_scores[k]
         scores['drusen'] = (k[0], 0)
         scores['pigment'] = (0, k[1])
-        assert deepseenet.model.get_simplified_score(scores) == simple_scores[k]
+        assert deepseenet.deepseenet_simplified.get_simplified_score(scores) == simple_scores[k]
         scores['drusen'] = (k[0], 0)
         scores['pigment'] = (0, k[1])
-        assert deepseenet.model.get_simplified_score(scores) == simple_scores[k]
+        assert deepseenet.deepseenet_simplified.get_simplified_score(scores) == simple_scores[k]
 
 
 def test_both_eyes():
@@ -54,4 +54,4 @@ def test_both_eyes():
     for k in simple_scores:
         scores['drusen'] = (k[0], k[0])
         scores['pigment'] = (k[1], k[1])
-        assert deepseenet.model.get_simplified_score(scores) == simple_scores[k]
+        assert deepseenet.deepseenet_simplified.get_simplified_score(scores) == simple_scores[k]

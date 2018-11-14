@@ -2,7 +2,7 @@ import logging
 
 import numpy as np
 
-from deepseenet import eyesnet_drusen, eyesnet_pigment, eyesnet_adv_amd
+from deepseenet import deepseenet_drusen, deepseenet_pigment, deepseenet_adv_amd
 
 
 def get_simplified_score(scores):
@@ -48,20 +48,20 @@ def get_simplified_score(scores):
 
 
 class EyesNetSimplifiedScore(object):
-    def __init__(self, drusen_model='areds1', pigment_model='areds1', advanced_amd_model='areds1'):
+    def __init__(self, drusen_model='areds', pigment_model='areds', advanced_amd_model='areds'):
         """
         Args:
             drusen_model: Path or file object.
             pigment_model: Path or file object.
             advanced_amd_model: Path or file object.
         """
-        self.drusen = eyesnet_drusen.EyesNetDrusen(drusen_model)
-        self.pigment = eyesnet_pigment.EyesNetPigment(pigment_model)
-        self.adv = eyesnet_adv_amd.EyesNetAdvancedAMD(advanced_amd_model)
+        self.drusen = deepseenet_drusen.DeepSeeNetDrusen(drusen_model)
+        self.pigment = deepseenet_pigment.DeepSeeNetPigment(pigment_model)
+        self.adv = deepseenet_adv_amd.DeepSeeNetAdvancedAMD(advanced_amd_model)
         self.models = {
-            'drusen': (self.drusen, eyesnet_drusen.preprocess_image),
-            'pigment': (self.pigment, eyesnet_pigment.preprocess_image),
-            'advanced_amd': (self.adv, eyesnet_adv_amd.preprocess_image),
+            'drusen': (self.drusen, deepseenet_drusen.preprocess_image),
+            'pigment': (self.pigment, deepseenet_pigment.preprocess_image),
+            'advanced_amd': (self.adv, deepseenet_adv_amd.preprocess_image),
         }
 
     def predict(self, x_left, x_right, verbose=0):

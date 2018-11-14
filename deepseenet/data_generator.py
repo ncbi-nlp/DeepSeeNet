@@ -1,16 +1,15 @@
 from typing import Callable
 
 import numpy as np
-from keras.preprocessing import image
 from keras.utils import Sequence, to_categorical
 from sklearn.utils import class_weight
 
-from deepseenet.utils import crop2square, cal_chunk_number
+from deepseenet.utils import cal_chunk_number
 
 
 class DataGenerator(Sequence):
     def __init__(self, data, *, batch_size: int, n_classes: int,
-                 preprocess_image: Callable[[str]], shuffle: bool=False):
+                 preprocess_image: Callable, shuffle: bool=False):
         """
 
         Args:

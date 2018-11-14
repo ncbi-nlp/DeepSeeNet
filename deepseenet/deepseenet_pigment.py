@@ -5,10 +5,10 @@ from keras import models
 from keras.preprocessing import image
 from keras.utils import get_file
 
-from deepseenet import eyesnet_risk_factor
+from deepseenet import deepseenet_risk_factor
 from deepseenet.utils import crop2square
 
-PIGMENT_PATH = 'https://github.com/yfpeng/EyesNet/releases/download/v0.1/pigment_model.h5'
+PIGMENT_PATH = 'https://github.com/ncbi-nlp/DeepSeeNet/releases/download/0.1/pigment_model.h5'
 PIGMENT_MD5 = 'e38f60fa9c0fc6cd7a5022b07b722927'
 
 
@@ -26,11 +26,11 @@ def preprocess_image(image_path):
     img = crop2square(image.load_img(image_path)).resize((224, 224))
     x = image.img_to_array(img)
     x = np.expand_dims(x, axis=0)
-    x = eyesnet_risk_factor.preprocess_input(x)
+    x = deepseenet_risk_factor.preprocess_input(x)
     return x
 
 
-def EyesNetPigment(model='areds1'):
+def DeepSeeNetPigment(model='areds'):
     """
     Instantiates the EyesNet pigmentary abnormality architecture.
 

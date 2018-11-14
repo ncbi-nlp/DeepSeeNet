@@ -85,7 +85,7 @@ Besides grading the simplified score, we also provide individual risk factor mod
 
 All models can be found at ``deepseenet``.
 
-The pretrained models can be found at: 
+The pretrained models can be found at: `<https://github.com/ncbi-nlp/DeepSeeNet/releases/tag/0.1>`_
 
 
 Training DeepSeeNet model

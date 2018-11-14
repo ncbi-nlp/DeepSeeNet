@@ -9,6 +9,5 @@ This project adheres to the [Contributor Covenant Code of Conduct](http://contri
 DeepSeeNet is maintained with :heart: by:
 
 - **@yfpeng**
-- @qingyu-chen
 
 See also the list of [contributors](https://github.com/ncbi-nlp/DeepSeeNet/contributors) who participated in this project.
