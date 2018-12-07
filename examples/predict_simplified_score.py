@@ -16,7 +16,7 @@ import docopt
 import numpy as np
 from keras.preprocessing import image
 
-from deepseenet import eyesnet_simplified
+from deepseenet import deepseenet_simplified
 from deepseenet.utils import crop2square, pick_device
 
 
@@ -49,6 +49,6 @@ if __name__ == '__main__':
     advanced_amd_model = argv['-a'] if '-a' in argv else None
 
     pick_device()
-    clf = eyesnet_simplified.EyesNetSimplifiedScore(drusen_model, pigment_model, advanced_amd_model)
+    clf = deepseenet_simplified.DeepSeeNetSimplifiedScore(drusen_model, pigment_model, advanced_amd_model)
     score = clf.predict(argv['<left_eye_image>'], argv['<right_eye_image>'], verbose=1)
     print('The simplified score:', score)

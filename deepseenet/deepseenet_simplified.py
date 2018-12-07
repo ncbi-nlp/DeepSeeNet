@@ -47,7 +47,7 @@ def get_simplified_score(scores):
     return 5 if score >= 5 else score
 
 
-class EyesNetSimplifiedScore(object):
+class DeepSeeNetSimplifiedScore(object):
     def __init__(self, drusen_model='areds', pigment_model='areds', advanced_amd_model='areds'):
         """
         Args:
