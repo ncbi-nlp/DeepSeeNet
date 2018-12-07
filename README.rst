@@ -22,7 +22,7 @@ Prerequisites
 
 *  python =3.6
 *  tensorflow >=1.6.0
-*  keras =2.1.5
+*  keras =2.2.4
 *  Linux
 
 Tensorflow can be downloaded from `https://www.tensorflow.org <https://www.tensorflow.org/>`_.
@@ -46,13 +46,17 @@ The easiest way is to run the following command
 
    $ python examples/predict_simplified_score.py data/left_eye.jpg data/right_eye.jpg
    ...
-   INFO:root:Loading the model: drusen
-   INFO:root:Loading the model: advanced_amd
-   INFO:root:Loading the model: pigment
+   Downloading data from https://github.com/ncbi-nlp/DeepSeeNet/releases/download/0.1/drusen_model.h5
+   INFO:root:Loading the model: /tmp/.keras/datasets/drusen_model.h5
+   Downloading data from https://github.com/ncbi-nlp/DeepSeeNet/releases/download/0.1/pigment_model.h5
+   INFO:root:Loading the model: /tmp/.keras/datasets/pigment_model.h5
+   Downloading data from https://github.com/ncbi-nlp/DeepSeeNet/releases/download/0.1/advanced_amd_model.h5
+   INFO:root:Loading the model: /tmp/.keras/datasets/advanced_amd_model.h5
    ...
    INFO:root:Processing: data/left_eye.jpg
    INFO:root:Processing: data/right_eye.jpg
    ...
+   INFO:root:Risk factors: {'pigment': (0, 0), 'advanced_amd': (0, 0), 'drusen': (2, 2)}
    The simplified score: 2
 
 The script will
@@ -76,11 +80,12 @@ Besides grading the simplified score, we also provide individual risk factor mod
 
    $ python examples/predict_drusen.py data/left_eye.jpg
    ...
-   INFO:root:Loading the model: drusen
+   INFO:root:Loading the model: /tmp/.keras/datasets/drusen_model.h5
    ...
    INFO:root:Processing: data/left_eye.jpg
    ...
-   Drusen size: large
+   The drusen score: [[0.21020733 0.2953384  0.49445423]]
+   The drusen size: large
 
 
 All models can be found at ``deepseenet``.

@@ -21,7 +21,7 @@ from keras import callbacks
 from keras.optimizers import Adam
 from keras.preprocessing import image
 
-from deepseenet import eyesnet_risk_factor
+from deepseenet import deepseenet_risk_factor
 from deepseenet.data_generator import DataGenerator
 from deepseenet.utils import pick_device, crop2square
 
@@ -30,7 +30,7 @@ def preprocess_image(image_path):
     img = crop2square(image.load_img(image_path)).resize((224, 224))
     x = image.img_to_array(img)
     x = np.expand_dims(x, axis=0)
-    x = eyesnet_risk_factor.preprocess_input(x)
+    x = deepseenet_risk_factor.preprocess_input(x)
     return x
 
 
@@ -102,6 +102,6 @@ if __name__ == '__main__':
     train_data, valid_data = prep_instances(argv['<dataset>'], parent=argv['--prefix'])
     logging.info('Training instances: %s', len(train_data))
     logging.info('Validation instances: %s', len(valid_data))
-    model = eyesnet_risk_factor.RiskFactorModel(n_classes=n_classes)
+    model = deepseenet_risk_factor.RiskFactorModel(n_classes=n_classes)
     train(model, train_data, valid_data, argv['<best_model>'], n_classes=n_classes)
 

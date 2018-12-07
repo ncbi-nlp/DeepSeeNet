@@ -5,14 +5,14 @@ Usage:
     predict_drusen [options] <eye_image>
 
 Options:
-    -d <str>    Drusen model. [default: areds1]
+    -d <str>    Drusen model file. [default: areds]
 """
 import logging
 import sys
 
 import docopt
 
-from deepseenet.eyesnet_drusen import EyesNetDrusen, preprocess_image, get_drusen_size
+from deepseenet.deepseenet_drusen import DeepSeeNetDrusen, preprocess_image, get_drusen_size
 from deepseenet.utils import pick_device
 
 if __name__ == '__main__':
@@ -21,7 +21,7 @@ if __name__ == '__main__':
     logging.debug(argv)
 
     pick_device()
-    clf = EyesNetDrusen(argv['-d'])
+    clf = DeepSeeNetDrusen(argv['-d'])
     x = preprocess_image(argv['<eye_image>'])
     score = clf.predict(x, verbose=1)
     print('The drusen score:', score)

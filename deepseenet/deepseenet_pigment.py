@@ -41,7 +41,7 @@ def DeepSeeNetPigment(model='areds'):
     Returns:
         A Keras model instance.
     """
-    if model == 'areds1':
+    if model == 'areds':
         model = get_file(
             'pigment_model.h5',
             PIGMENT_PATH,

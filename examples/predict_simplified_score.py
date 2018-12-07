@@ -5,9 +5,9 @@ Usage:
     predict_simplified_score [options] <left_eye_image> <right_eye_image>
 
 Options:
-    -d <str>    Drusen model
-    -p <str>    Pigment model
-    -a <str>    Advanced AMD model
+    -d <str>    Drusen model path [default: areds]
+    -p <str>    Pigment model path [default: areds]
+    -a <str>    Advanced AMD model path [default: areds]
 """
 import logging
 import sys
@@ -44,9 +44,9 @@ if __name__ == '__main__':
     logging.basicConfig(level=logging.DEBUG)
     logging.debug(argv)
 
-    drusen_model = argv['-d'] if '-d' in argv else None
-    pigment_model = argv['-p'] if '-p' in argv else None
-    advanced_amd_model = argv['-a'] if '-a' in argv else None
+    drusen_model = argv['-d']
+    pigment_model = argv['-p']
+    advanced_amd_model = argv['-a']
 
     pick_device()
     clf = deepseenet_simplified.DeepSeeNetSimplifiedScore(drusen_model, pigment_model, advanced_amd_model)

@@ -76,7 +76,7 @@ class DeepSeeNetSimplifiedScore(object):
         Returns:
             Numpy array of scores of 0-5
         """
-        assert x_left.shape[0] == x_right.shape[0]
+        # assert x_left.shape[0] == x_right.shape[0]
         scores = {}
         for model_name, (model, preprocess_image) in self.models.items():
             left_score = np.argmax(model.predict(preprocess_image(x_left)), axis=1)[0]
