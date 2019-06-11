@@ -2,6 +2,8 @@
    :target: https://github.com/ncbi-nlp/DeepSeeNet/blob/master/images/deepseenet.png?raw=true
    :alt: DeepSeeNet
 
+.. role:: raw-html(raw)
+   :format: html
 
 -----------------------
 
@@ -9,7 +11,7 @@ DeepSeeNet is a high-performance deep learning framework for grading of color fu
 
 
 Getting Started with DeepSeeNet
-============================
+===============================
 
 These instructions will get you a copy of the project up and run on your local machine for development and testing purposes.
 The package should successfully install on Linux.
@@ -38,7 +40,7 @@ Installing from source
 
 
 Using DeepSeeNet for grading simplified scores
--------------------------------------------
+----------------------------------------------
 
 The easiest way is to run the following command
 
@@ -71,8 +73,8 @@ More options (e.g., setting the models) can be obtained by running
    $ python examples/predict_simplified_score.py --help
 
 
-Pretrained DeepSeeNet models
-----------------------------
+Pre-trained DeepSeeNet models
+-----------------------------
 
 Besides grading the simplified score, we also provide individual risk factor models. For example
 
@@ -87,10 +89,13 @@ Besides grading the simplified score, we also provide individual risk factor mod
    The drusen score: [[0.21020733 0.2953384  0.49445423]]
    The drusen size: large
 
+Here, we provide the following pre-trained models:
 
-All models can be found at ``deepseenet``.
-
-The pretrained models can be found at: `<https://github.com/ncbi-nlp/DeepSeeNet/releases/tag/0.1>`_
+*  `drusen size <https://github.com/ncbi-nlp/DeepSeeNet/releases/tag/0.1>`_: non/small, intermediate, large
+*  `pigmentary abnormalities <https://github.com/ncbi-nlp/DeepSeeNet/releases/tag/0.1>`_: no, yes
+*  `late AMD <https://github.com/ncbi-nlp/DeepSeeNet/releases/tag/0.1>`_: no, yes
+*  `geographic atrophy (GA) <https://github.com/ncbi-nlp/DeepSeeNet/releases/tag/0.2>`_: no, yes
+*  `central GA <https://github.com/ncbi-nlp/DeepSeeNet/releases/tag/0.2>`_: no, yes
 
 
 Training DeepSeeNet model
@@ -122,7 +127,9 @@ Citing DeepSeeNet
 
 If you're running the DeepSeeNet framework, please cite:
 
-*  Peng Y, Dharssi S, Chen Q, Keenan T, Agron E, Wong W, Chew E, Lu Z. DeepSeeNet: A deep learning model for automated classification of patientbased age-related macular degeneration severity from color fundus photographs. Ophthalmology. 2018 (Accepted).
+*  Peng Y*, Dharssi S*, Chen Q, Keenan T, Agron E, Wong W, Chew E, Lu Z. DeepSeeNet: A deep learning model for automated classification of patientbased age-related macular degeneration severity from color fundus photographs. Ophthalmology. 2019. 126(4), 565-575.
+
+*  Keenan T*, Dharssi S*, Peng Y*, Chen Q, Agron E, Wong W, Lu Z, Chew E. A deep learning approach for automated detection of geographic atrophy from color fundus photographs. Ophthalmology. 2019 (Accepted).
 
 
 Disclaimer
