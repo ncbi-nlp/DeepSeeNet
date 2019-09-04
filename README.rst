@@ -9,7 +9,6 @@
 
 DeepSeeNet is a high-performance deep learning framework for grading of color fundus photographs using the AREDS simplified severity scale. For more details, please see `<https://ncbi-nlp.github.io/DeepSeeNet/>`_.
 
-
 Getting Started with DeepSeeNet
 ===============================
 
@@ -132,8 +131,8 @@ If you're running the DeepSeeNet framework, please cite:
 *  Keenan T*, Dharssi S*, Peng Y*, Chen Q, Agron E, Wong W, Lu Z, Chew E. A deep learning approach for automated detection of geographic atrophy from color fundus photographs. Ophthalmology. 2019 (Accepted).
 
 
-Disclaimer
-==========
+NCBI's Disclaimer
+=================
 
 This tool shows the results of research conducted in the `Computational Biology Branch <https://www.ncbi.nlm.nih.gov/research/>`_, `NCBI <https://www.ncbi.nlm.nih.gov/home/about>`_. 
 
@@ -142,4 +141,10 @@ The information produced on this website is not intended for direct diagnostic u
 More information about `NCBI's disclaimer policy <https://www.ncbi.nlm.nih.gov/home/about/policies.shtml>`_ is available.
 
 About `text mining group <https://www.ncbi.nlm.nih.gov/research/bionlp/>`_.
+
+For Research Use Only
+=====================
+
+The performance characteristics of this product have not been evaluated by the Food and Drug Administration and is not intended for commercial use or purposes beyond research use only. 
+
 
