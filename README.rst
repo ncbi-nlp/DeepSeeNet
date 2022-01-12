@@ -4,10 +4,6 @@
 
 .. role:: raw-html(raw)
    :format: html
- 
-.. image:: https://hits.dwyl.com/ncbi-nlp/DeepSeeNet.svg
-   :target: https://hits.dwyl.com/ncbi-nlp/DeepSeeNet
-   :alt: HitCount
 
 -----------------------
 
