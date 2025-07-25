@@ -9,6 +9,8 @@
 
 DeepSeeNet is a high-performance deep learning framework for grading of color fundus photographs using the AREDS simplified severity scale. For more details, please see `<https://ncbi-nlp.github.io/DeepSeeNet/>`_.
 
+Update (July 25, 2025): DeepSeeNet + is now available. The model has been further trained on an additional 40,000 curated color fundus photographs from the AREDS2 dataset. Please see `https://github.com/ncbi-nlp/deepseenet-plus/` for details.
+
 Getting Started with DeepSeeNet
 ===============================
 
@@ -129,6 +131,8 @@ If you're running the DeepSeeNet framework, please cite:
 *  Peng Y*, Dharssi S*, Chen Q, Keenan T, Agron E, Wong W, Chew E, Lu Z. DeepSeeNet: A deep learning model for automated classification of patientbased age-related macular degeneration severity from color fundus photographs. Ophthalmology. 2019. 126(4), 565-575.
 
 *  Keenan T*, Dharssi S*, Peng Y*, Chen Q, Agron E, Wong W, Lu Z, Chew E. A deep learning approach for automated detection of geographic atrophy from color fundus photographs. Ophthalmology. 2019 (Accepted).
+
+*   Chen, Q*., Keenan, T.D*., Agron, E., Allot, A., Guan, E., Duong, B., Elsawy, A., Hou, B., Xue, C., Bhandari, S. and Broadhead, G., ... Lu, L., 2025. AI Workflow, External Validation, and Development in Eye Disease Diagnosis. JAMA Network Open, 8(7), pp.e2517204-e2517204. (For deepseenet+)
 
 
 NCBI's Disclaimer
